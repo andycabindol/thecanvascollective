@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Canvas Collective</title>
+    <link rel="stylesheet" href="modal.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #canvas {
+            border: 1px solid black;
+            cursor: crosshair;
+        }
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            border: 1px solid #ccc;
+            padding: 5px;
+            max-width: 100px;
+            cursor: pointer;
+        }
+        #controls {
+            margin: 10px 0;
+        }
+
+     
+
+    </style>
+</head>
+<body>
+    <h1>The Canvas Collective</h1>
+    <a href="/archive.html" style="text-decoration: none; color: blue;">View Archive</a>
+    <h2 id="drawingPrompt">Prompt: <span id="promptText">Loading...</span></h2>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <div id="controls">
+        <button id="undoBtn">Undo</button>
+        <button id="eraserBtn">Eraser: OFF</button>
+        <button id="submitBtn">Submit</button>
+    </div>
+    <section class="collage">
+        <h2>Collage</h2>
+        <div id="collage">
+            
+        </div>
+    </section>
+    <h2>Gallery</h2>
+    <div id="gallery"></div>
+    <div id="imageModal" class="modal">
+        <div class="modal-container">
+            <span id="closeModal" class="close">&times;</span>
+            <img id="modalImage" class="modal-content" />
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+</body>
+</html>
